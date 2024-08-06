@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <h1>Contact Us</h1>
+    <form action="" novalidate>
+      <div class = "input first-name">
+        <label for="first-name">First Name <span class="asterisk">*</span></label>
+        <input type="text" name="firstName" id="first-name">
+        <div class="required-message">This field is required</div>
+      </div>
+      <div class = "input">
+        <label for="last-name">Last Name <span class="asterisk">*</span></label>
+        <input type="text" name="lastName" id="last-name">
+        <div class="required-message">This field is required</div>
+      </div>
+      <div class="email input">
+        <label for="email">Email Address <span class="asterisk">*</span></label>
+        <input type="email" name="email" id="email">
+        <div class="required-message">This field is required</div>
+        <div class="invalid-message">Please enter a valid email address</div>
+      </div>
+      <div class="input query">
+        <label>Query Type <span class="asterisk">*</span></label>
+        <div class="options">
+          <div class="radio-container">
+            <label class="radio-label" tabindex="0" for="general-enquiry"><input tabindex="-1" type="radio" name="request" id="general-enquiry" value="generalEnquiry">General Enquiry</label>
+          </div>
+          <div class = "radio-container">
+            <label class="radio-label"tabindex="0" for="support-request"><input tabindex="-1" type="radio" name="request" id="support-request" value="supportRequest">Support Request</label>
+          </div>
+        </div>
+        <div class="required-message">Please select a query type</div>
+      </div>
+      <div class="input message">
+        <label for="message">Message <span class="asterisk">*</span></label>
+        <textarea name="message" id="message"></textarea>
+        <div class="required-message">This field is required</div>
+      </div>
+      <div class="input checkbox">
+        <div class = "checkbox-container">
+          <input type="checkbox" name="isConsented" id="contact">
+          <label for="contact">I consent to being contacted by the team <span>*</span></label>
+        </div>
+        <div class="required-message">To submit this form, please consent to being contacted</div>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+  <div class = "success-popup">
+    <div>
+      <img src="./assets/images/icon-success-check.svg" alt="">
+      <h2>Message Sent!</h2>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  
+  
+  
+  
+  
+
+
+  <!-- Message Sent!
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="mailto:marwanmohammad432@gmail.com">Marwan Mohammed</a>.
+  </div> -->
+  <script src="./index.js"></script>
+</body>
+</html>

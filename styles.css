@@ -1,0 +1,210 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+    --green-200: hsl(148, 38%, 91%);
+    --green-600: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: "Karla", sans-serif;
+    background-color: var(--green-200);
+    padding-block: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+h1 {
+    margin-bottom: 30px;
+}
+label {
+    font-size: 1rem;
+}
+input, 
+textarea {
+    border: 1px solid #aaa;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px;
+    caret-color: var(--green-600);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+input, 
+textarea,
+.radio-container label {
+    border: 1px solid #aaa;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px;
+    caret-color: var(--green-600);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+textarea {
+    resize: none;
+}
+input[type="radio"] {
+    accent-color: var(--green-600);
+}
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover,
+.radio-container label:focus,
+.radio-container label:hover,
+label:has(> input[type="radio"]:checked):focus,
+label:has(> input[type="radio"]:checked):hover,
+label:has(> input[type="radio"]:checked) {
+    outline: none;
+    border: 1px solid var(--green-600);
+}
+label:has(> input[type="radio"]:checked) {
+    background-color: var(--green-200);
+}
+input.invalid {
+    border: 1px solid var(--red);
+}
+.asterisk {
+    color: var(--green-600);
+}
+.required-message,
+.invalid-message {
+    color: var(--red);
+    display: none;
+}
+main {
+    background-color: var(--white);
+    padding: 40px;
+    width: 80%;
+    margin-inline: auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+main h1 {
+    font-weight: 700;
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+@media (max-width: 767px) {
+    form {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+    .first-name {
+        grid-column: 1 / 3;
+    }
+}
+.email {
+    grid-column: 1 / 3;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.input.checkbox {
+    grid-column: 1 / 3;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.checkbox-container label {
+    color: #555;
+    cursor: pointer;
+}
+.input.message {
+    grid-column: 1 / 3;
+}
+.input.query {
+    grid-column: 1 / 3;
+}
+.input.query .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+@media (max-width: 767px) {
+    .input.query .options {
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+    }
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+input[type="checkbox"]:checked {
+    accent-color: var(--green-600);
+}
+input[type="submit"] {
+    font-family: "Karla";
+    color: var(--white);
+    background-color: var(--green-600);
+    font-weight: 400;
+    height: fit-content;
+    grid-column: 1 / 3;
+}
+.radio-container label {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 10px;
+
+}
+.radio-container label:hover {
+    outline: none;
+    border: 1px solid var(--green-600);
+}
+.error {
+    border: 1px solid var(--red);
+}
+.success-popup {
+    display: none;
+    position: absolute;
+    background-color: var(--grey-900);
+    padding: 30px;
+    top: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.success-popup > div {
+    display: flex;
+    margin-bottom: 10px;
+    column-gap: 10px;
+}
+.success-popup h2 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+.success-popup p {
+    color: var(--green-200);
+}
